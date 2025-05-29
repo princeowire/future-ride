@@ -1,0 +1,41 @@
+.product-info {
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .ftndtec {
+    font-size: 18px;
+  }
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0 20px 0;
+  width: 100%;
+
+  .product-image {
+    width: 58%;
+    img {
+      width: 100%;
+      margin-right: 50px;
+    }
+  }
+
+  .product-details {
+    width: 40%;
+    span {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}

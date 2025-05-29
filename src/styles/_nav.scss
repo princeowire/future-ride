@@ -1,0 +1,64 @@
+@use "./variable";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 50px;
+  border-bottom: 1px solid variable.$border-color;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+
+  a {
+    text-decoration: none;
+    color: variable.$text-color;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: variable.$primary-color;
+    }
+
+    .fake-select {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+}
+
+.btn-div{
+  height: 40px;
+
+  button {
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    border-radius: 5px;
+    height: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  button:nth-child(1) {
+    background-color: transparent;
+    margin-right: 20px;
+    &:hover {
+      border: 1px solid black;
+    }
+  }
+
+  button:nth-child(2) {
+    background-color: variable.$primary-color;
+    color: white;
+    &:hover {
+      border: 1px solid black;
+    }
+  }
+}
