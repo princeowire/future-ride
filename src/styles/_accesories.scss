@@ -1,0 +1,181 @@
+@use "./variable";
+
+.accesories {
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .ftndtec {
+    font-size: 18px;
+  }
+}
+
+.golf-container {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+
+  .bag-rock {
+    width: 35%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      img {
+        width: 40px;
+        height: 40px; 
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .bag-rock-img {
+    width: 65%;
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.shopping-rack {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+
+  .shop-rack {
+    width: 35%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      img {
+        width: 40px;
+        height: 40px; 
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .shop-rack-img {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+      img {
+        width: 50%;
+      }
+
+      img:nth-child(2) {
+        width: 30%;
+        right: 0px;
+      }
+  }
+}
+
+.coming-soon {
+  margin-top: 2rem;
+  padding: 10px 30px;
+  border: 2px solid black;
+  border-radius: 05px;
+}
+
+@media only screen and (max-width: 900px) {
+  .accesories {
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+
+  .accesories {
+      h2 {
+        text-align: center;
+      }
+  
+      .ftndtec {
+        text-align: center;
+      }
+    }
+
+
+  .golf-container {
+    flex-wrap: wrap;
+
+    .bag-rock-img {
+      width: 100%;
+      flex-wrap: wrap;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .bag-rock {
+      width: 100%;
+
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .shopping-rack {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    .shop-rack {
+      width: 100%;
+
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+
+    .shop-rack-img {
+      width: 100%;
+      flex-wrap: wrap;
+
+      img {
+        width: 100%;
+      }
+
+      img:nth-child(2) {
+        width: 100%;
+      }
+    }
+  }
+
+}

@@ -3,7 +3,7 @@ import Logo from '../assets/logo.svg'
 
 const Nav = () => {
   return (
-    <div className="nav">
+    <nav className="nav">
       <img src={Logo} alt="logo" />
 
       <div className='links'>
@@ -17,7 +17,7 @@ const Nav = () => {
         <button>SIGN UP</button>
       </div>
 
-    </div>
+    </nav>
   )
 }
 

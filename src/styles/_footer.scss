@@ -1,0 +1,57 @@
+@use './variable';
+
+.footer {
+  padding: 50px 50px 0px 50px;
+  margin-top: 4rem;
+  background-color: variable.$primary-color;
+  color: white;
+  width: 100%;
+
+  .ft-container {
+    display: flex;
+
+    .ft-scooter {
+      width: 50%;
+      margin-left: -50px;
+      margin-top: -130px;
+    }
+
+    .ft-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      padding: 0px 30px 0px 30px;
+
+      .ft-grps {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h6 {
+          font-size: 1.6rem;
+          font-weight: 400;
+        }
+
+        p:nth-child(2) {
+          margin-top: 20px;
+        }
+
+        .socials {
+          display: flex;
+          gap: 10px;
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 10px;
+  }
+}
