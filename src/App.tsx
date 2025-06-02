@@ -5,8 +5,8 @@ import HeroSection from './components/HeroSection';
 import ProductInfo from './components/ProductInfo';
 import Accesories from './components/accesories';
 import Gallery from './components/Gallery';
-import Color from './components/color';
-import NewsLetter from './components/Newsletter';
+import Color from './components/Color';
+import NewsLetter from './components/NewsLetter';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
