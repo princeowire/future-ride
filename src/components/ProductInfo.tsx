@@ -5,7 +5,7 @@ import wheel from '../assets/striped-wheel.svg'
 const ProductInfo = () => {
   return (
     <>
-      <div className="product-info">
+      <div className="product-info" id='product'>
         <h2>Product Infomation</h2>
         <p className="ftndtec">Our Scooter has following unique design and technology features:</p>
 

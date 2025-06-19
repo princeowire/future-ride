@@ -64,8 +64,136 @@
   }
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 25px;
+  height: 18px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: black;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* X animation */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.m-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+
+  a {
+    text-decoration: none;
+    color: variable.$text-color;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: x-large;
+
+    &:hover {
+      color: variable.$primary-color;
+    }
+  }
+}
+
+/* Mobile menu hidden by default */
+.mobile-menu {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 0px;
+}
+
+.mobile-menu.show {
+  width: 280px;
+  padding: 10px;
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media only screen and (max-width: 900px) {
   .nav {
     padding: 10px 20px;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    padding: 10px 20px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .btn-div {
+    display: none;
+  }
+  
+  .btn-div-mobile{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    button {
+      border: 1px solid transparent;
+      padding: 5px 15px;
+      border-radius: 5px;
+      height: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:nth-child(1) {
+      background-color: transparent;
+      margin-right: 20px;
+      &:hover {
+        border: 1px solid black;
+      }
+    }
+
+    button:nth-child(2) {
+      background-color: variable.$primary-color;
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      &:hover {
+        border: 1px solid black;
+      }
+    }
+}
 }

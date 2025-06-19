@@ -4,7 +4,7 @@ import part from '../assets/parts.png'
 
 const Gallery = () => {
   return (
-    <div className='gallery'>
+    <div className='gallery' id='gallery'>
       <h3>Gallery</h3>
       <p className="ftndtec">View gallery of our products and make yourself satisfied with our creation.</p>
 
