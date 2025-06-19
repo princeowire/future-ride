@@ -44,3 +44,25 @@
     color: white;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .news {
+    padding: 10px 20px ;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .news-container {
+    flex-wrap: wrap;
+    gap: 20px;
+    height: auto;
+
+    input {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

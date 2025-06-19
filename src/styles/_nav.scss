@@ -7,6 +7,8 @@
   width: 100%;
   padding: 10px 50px;
   border-bottom: 1px solid variable.$border-color;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
 }
 
 .links {
@@ -71,6 +73,7 @@
   height: 18px;
   justify-content: space-between;
   cursor: pointer;
+  z-index: 10;
 }
 
 .hamburger span {
@@ -99,9 +102,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 70px;
   margin-bottom: 70px;
 
   a {
@@ -112,7 +114,7 @@
     font-size: x-large;
 
     &:hover {
-      color: variable.$primary-color;
+      color: #373535d0;
     }
   }
 }
@@ -121,15 +123,13 @@
 .mobile-menu {
   transform: translateX(100%);
   opacity: 0;
-  pointer-events: none;
   transition: all 0.4s ease-in-out;
-  position: absolute;
-  top: 60px;
-  right: 0;
+  position: fixed;
+  top: 0;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 0px;
+  right: 0px;
 }
 
 .mobile-menu.show {
@@ -137,7 +137,6 @@
   padding: 10px;
   transform: translateX(0);
   opacity: 1;
-  pointer-events: auto;
 }
 
 @media only screen and (max-width: 900px) {
@@ -149,6 +148,7 @@
 @media only screen and (max-width: 600px) {
   .nav {
     padding: 10px 20px;
+    position: fixed;
   }
 
   .links {
